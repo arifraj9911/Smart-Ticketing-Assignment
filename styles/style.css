@@ -25,3 +25,7 @@
   background: rgba(29, 209, 0, 0.1);
 };
 
+.dynamic-bg{
+    background-color: #1DD100;
+    color: white;
+}
