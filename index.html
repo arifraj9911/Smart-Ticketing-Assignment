@@ -13,8 +13,8 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="max-w-screen-xl mx-auto font-raleway">
+  <body class="font-raleway">
+    <header class="max-w-screen-xl mx-auto">
       <!-- navbar section -->
       <nav>
         <div class="navbar bg-base-100">
@@ -83,14 +83,58 @@
             molestiae molestias, id velit doloremque consequatur!
           </p>
           <button
-            class="bg-[#1DD100] text-black px-5 py-3 rounded-xl  font-bold"
+            class="bg-[#1DD100] text-black px-5 py-3 rounded-xl font-bold"
           >
             Buy Ticket
           </button>
         </div>
       </section>
     </header>
-    <main class="max-w-screen-xl mx-auto"></main>
+    <main class="max-w-screen-xl mx-auto">
+      <!-- Offer section -->
+      <section class="text-center mt-28">
+        <h1 class="text-4xl font-bold mb-12">Best offers for you</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+          <div
+            class="bg-[#FFBF0F] flex justify-center gap-16 pl-12 py-12 items-center rounded-3xl"
+          >
+            <div class="text-left font-inter">
+              <h2 class="text-2xl font-extrabold">15% OFF</h2>
+              <p class="text-md font-semibold">on you next purchase</p>
+              <p class="text-sm font-light">use by January 2024</p>
+            </div>
+            <div
+              class="divider lg:divider-horizontal w-1 border border-dotted bg-white"
+            ></div>
+            <div class="text-left">
+              <h2 class="text-2xl font-extrabold">NEW15</h2>
+              <p class="text-sm font-light">Coupon Code</p>
+            </div>
+          </div>
+          <div
+            class="bg-[#F78C9C] flex justify-center gap-16 pl-12 py-12 items-center rounded-3xl"
+          >
+            <div class="text-left font-inter">
+              <h2 class="text-2xl font-extrabold">20% OFF</h2>
+              <p class="text-md font-semibold">on you next purchase</p>
+              <p class="text-sm font-light">use by January 2024</p>
+            </div>
+            <div
+              class="divider lg:divider-horizontal w-1 border border-dotted bg-white"
+            ></div>
+            <div class="text-left">
+              <h2 class="text-2xl font-extrabold">Couple20</h2>
+              <p class="text-sm font-light">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <button class="primary-button w-36 bg-white text-[#1DD100] font-bold">
+            See All Offers
+          </button>
+        </div>
+      </section>
+    </main>
     <footer></footer>
 
     <script src="scripts/index.js"></script>
