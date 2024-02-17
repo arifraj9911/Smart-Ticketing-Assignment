@@ -14,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="max-w-screen-xl mx-auto">
+    <header class="max-w-screen-xl mx-auto font-raleway">
       <!-- navbar section -->
       <nav>
         <div class="navbar bg-base-100">
@@ -71,12 +71,23 @@
       <section
         class="bg-[url('images/banner.png')] h-screen bg-cover bg-no-repeat"
       >
-        <h1
-          class="text-5xl flex flex-col justify-center items-center text-white h-screen"
+        <div
+          class="flex flex-col gap-6 justify-center w-1/2 mx-auto items-center text-white h-screen"
         >
-          <span>End-to-End Travel with</span>
-          <span class="text-[#1DD100]">P Paribahan</span>
-        </h1>
+          <h1 class="text-5xl flex flex-col gap-4 font-bold items-center">
+            <span>End-to-End Travel with</span>
+            <span class="text-[#1DD100]">P Paribahan</span>
+          </h1>
+          <p class="font-light text-center font-inter">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+            molestiae molestias, id velit doloremque consequatur!
+          </p>
+          <button
+            class="bg-[#1DD100] text-black px-5 py-3 rounded-xl  font-bold"
+          >
+            Buy Ticket
+          </button>
+        </div>
       </section>
     </header>
     <main class="max-w-screen-xl mx-auto"></main>
