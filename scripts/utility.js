@@ -57,8 +57,6 @@ function seatList(elementId) {
       if (seatArray.length === 4) {
         applyButton.removeAttribute("disabled");
       }
-
-      apply();
     } else if (seatArray.length >= 4) {
       alert("Maximum 4 Ticket can be buy for each");
     }
@@ -96,6 +94,8 @@ function apply() {
     grandTotal.innerText = grandTotalPrice;
     couponTwenty.classList.remove("hidden");
     couponBox.classList.add("hidden");
+  } else {
+    alert("Please give valid coupon code!");
   }
 }
 

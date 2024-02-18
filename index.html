@@ -160,11 +160,13 @@
                 </div>
               </div>
               <div>
-                <button class="primary-button w-36 border-0 items-center px-1">
+                <button class="primary-button w-36 border-0 items-center px-1 font-inter">
                   <img src="images/seat-green.png" alt="" />
-                  <span class="text-[#1DD100] font-semibold text-sm font-inter"
-                    > <span id="seat-available">40</span> Seats Left</span
-                  >
+                  <span class="text-[#1DD100] font-semibold text-sm font-inter">
+                    <span id="seat-available">40</span> Seats Left</span
+                    >
+                  </span>
+                    
                 </button>
               </div>
             </div>
@@ -327,38 +329,39 @@
                 <span>Price</span>
               </div>
               <hr class="my-4" />
-              <div id="seat-information">
-                
-              </div>
+              <div id="seat-information"></div>
               <hr class="my-4" />
               <div class="flex justify-between font-bold font-inter">
-                <span class="flex flex-col"> 
-                  Total Price
-                  
-                </span>
-                
-                
+                <span class="flex flex-col"> Total Price </span>
+
                 <span>BDT <span id="total-price">0</span></span>
               </div>
               <div class="font-inter">
-                <span id="coupon-fifteen" class=" hidden flex justify-between text-[#1DD100]">Discount <span>BDT 330</span></span>
-                  <span id="coupon-twenty" class=" hidden flex justify-between text-[#1DD100]">Discount <span>BDT 440</span></span>
+                <span
+                  id="coupon-fifteen"
+                  class="hidden flex justify-between text-[#1DD100]"
+                  >Discount <span>BDT 330</span></span
+                >
+                <span
+                  id="coupon-twenty"
+                  class="hidden flex justify-between text-[#1DD100]"
+                  >Discount <span>BDT 440</span></span
+                >
               </div>
               <div id="coupon-box" class="mt-4 mb-6 flex">
                 <label
-                  class="input input-bordered flex items-center rounded-r-none mr-[-6px]  border-0 gap-2 w-full"
+                  class="input input-bordered flex items-center rounded-r-none mr-[-6px] border-0 gap-2 w-full"
                 >
                   <input
-                  id="coupon-field"
+                    id="coupon-field"
                     type="text"
                     class="grow font-light text-sm"
                     placeholder="Have any coupon?"
-                    
                   />
                 </label>
                 <input
-                id="apply-button"
-                onclick="apply()"
+                  id="apply-button"
+                  onclick="apply()"
                   type="submit"
                   value="Apply"
                   class="p-2 input ml-1 bg-[#1DD100] outline-none text-white rounded-md rounded-l-none"
