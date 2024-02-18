@@ -7,6 +7,10 @@ function getSeatId(elementId) {
 let seatArray = [];
 const seatBooking = document.getElementById("seat-booking");
 const seatInformation = document.getElementById("seat-information");
+
+let seatPrice = 550;
+const totalPriceText = document.getElementById("total-price");
+
 function seatList(elementId) {
   elementId.addEventListener("click", function (event) {
     const specificSeat = event.target.innerText;
@@ -14,10 +18,10 @@ function seatList(elementId) {
     if (!seatArray.includes(seat) && seatArray.length < 4) {
       seatArray.push(seat);
       setBackgroundColorById(seat);
+
       seatBooking.innerText = seatArray.length;
 
       const span = document.createElement("span");
-
       span.innerHTML = `
       <div class="flex justify-between">
       <span> ${seat} </span>
@@ -27,6 +31,8 @@ function seatList(elementId) {
               
       `;
       seatInformation.appendChild(span);
+
+      totalPriceText.innerText = seatArray.length * seatPrice;
     } else if (seatArray.length >= 4) {
       alert("Maximum 4 Ticket can be buy for each");
     }
