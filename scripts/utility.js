@@ -5,6 +5,8 @@ function getSeatId(elementId) {
 }
 
 let seatArray = [];
+const seatBooking = document.getElementById("seat-booking");
+const seatInformation = document.getElementById("seat-information");
 function seatList(elementId) {
   elementId.addEventListener("click", function (event) {
     const specificSeat = event.target.innerText;
@@ -12,11 +14,26 @@ function seatList(elementId) {
     if (!seatArray.includes(seat) && seatArray.length < 4) {
       seatArray.push(seat);
       setBackgroundColorById(seat);
-    }else{
-        alert('Maximum 4 Ticket can be buy for each');
+      seatBooking.innerText = seatArray.length;
+
+      const span = document.createElement("span");
+
+      span.innerHTML = `
+      <div class="flex justify-between">
+      <span> ${seat} </span>
+      <span>Economy</span>
+      <span>550</span>
+              </div>
+              
+      `;
+      seatInformation.appendChild(span);
+    } else if (seatArray.length >= 4) {
+      alert("Maximum 4 Ticket can be buy for each");
     }
   });
 }
+
+// console.log(seatBooking);
 
 function setBackgroundColorById(elementId) {
   const mouseClick = document.getElementById(elementId);

@@ -9,6 +9,8 @@ seatList(seatListTwo);
 seatList(seatListThree);
 seatList(seatListFour);
 
+
+
 // seatListOne.addEventListener("click", function (event) {
 //   const specificSeat = event.target.innerText;
 //   const seat = getSeatId(specificSeat);
