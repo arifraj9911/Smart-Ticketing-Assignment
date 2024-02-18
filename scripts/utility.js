@@ -10,11 +10,14 @@ const seatInformation = document.getElementById("seat-information");
 
 let seatPrice = 550;
 const totalPriceText = document.getElementById("total-price");
+let totalPrice = "";
+
+const grandTotal = document.getElementById("grand-total");
 
 const phoneNumber = document.getElementById("phone-number");
 const nextButton = document.getElementById("next-button");
 
-const totalAvailableSeat = document.getElementById('seat-available');
+const totalAvailableSeat = document.getElementById("seat-available");
 console.log(typeof totalAvailableSeat.innerText);
 let totalSeat = parseInt(totalAvailableSeat.innerText);
 
@@ -28,9 +31,9 @@ function seatList(elementId) {
 
       seatBooking.innerText = seatArray.length;
 
-    //   available seat
-    availableSeat = totalSeat - seatArray.length;
-    totalAvailableSeat.innerText = availableSeat;
+      //   available seat
+      availableSeat = totalSeat - seatArray.length;
+      totalAvailableSeat.innerText = availableSeat;
 
       //   seat information set
       const span = document.createElement("span");
@@ -46,6 +49,16 @@ function seatList(elementId) {
 
       //   total price set
       totalPriceText.innerText = seatArray.length * seatPrice;
+      totalPrice = parseInt(totalPriceText.innerText);
+      grandTotal.innerText = totalPrice;
+
+      // Apply button
+      const applyButton = document.getElementById("apply-button");
+      if (seatArray.length === 4) {
+        applyButton.removeAttribute("disabled");
+      }
+
+      apply();
     } else if (seatArray.length >= 4) {
       alert("Maximum 4 Ticket can be buy for each");
     }
@@ -64,6 +77,27 @@ phoneNumber.addEventListener("keyup", function (event) {
     nextButton.removeAttribute("disabled");
   }
 });
+
+function apply() {
+  let couponBox = document.getElementById("coupon-box");
+  let couponField = document.getElementById("coupon-field").value;
+
+  let couponFifteen = document.getElementById("coupon-fifteen");
+  let couponTwenty = document.getElementById("coupon-twenty");
+
+  // console.log(couponField)
+  if (couponField === "NEW15") {
+    const grandTotalPrice = totalPrice - 330;
+    grandTotal.innerText = grandTotalPrice;
+    couponFifteen.classList.remove("hidden");
+    couponBox.classList.add("hidden");
+  } else if (couponField === "Couple20") {
+    const grandTotalPrice = totalPrice - 440;
+    grandTotal.innerText = grandTotalPrice;
+    couponTwenty.classList.remove("hidden");
+    couponBox.classList.add("hidden");
+  }
+}
 
 function setBackgroundColorById(elementId) {
   const mouseClick = document.getElementById(elementId);
