@@ -14,6 +14,10 @@ const totalPriceText = document.getElementById("total-price");
 const phoneNumber = document.getElementById("phone-number");
 const nextButton = document.getElementById("next-button");
 
+const totalAvailableSeat = document.getElementById('seat-available');
+console.log(typeof totalAvailableSeat.innerText);
+let totalSeat = parseInt(totalAvailableSeat.innerText);
+
 function seatList(elementId) {
   elementId.addEventListener("click", function (event) {
     const specificSeat = event.target.innerText;
@@ -23,6 +27,10 @@ function seatList(elementId) {
       setBackgroundColorById(seat);
 
       seatBooking.innerText = seatArray.length;
+
+    //   available seat
+    availableSeat = totalSeat - seatArray.length;
+    totalAvailableSeat.innerText = availableSeat;
 
       //   seat information set
       const span = document.createElement("span");
