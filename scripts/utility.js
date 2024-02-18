@@ -89,7 +89,7 @@ function apply() {
     grandTotal.innerText = grandTotalPrice;
     couponFifteen.classList.remove("hidden");
     couponBox.classList.add("hidden");
-  } else if (couponField === "Couple20") {
+  } else if (couponField === "Couple 20") {
     const grandTotalPrice = totalPrice - 440;
     grandTotal.innerText = grandTotalPrice;
     couponTwenty.classList.remove("hidden");
