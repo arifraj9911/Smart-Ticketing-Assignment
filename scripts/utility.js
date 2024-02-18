@@ -11,6 +11,9 @@ const seatInformation = document.getElementById("seat-information");
 let seatPrice = 550;
 const totalPriceText = document.getElementById("total-price");
 
+const phoneNumber = document.getElementById("phone-number");
+const nextButton = document.getElementById("next-button");
+
 function seatList(elementId) {
   elementId.addEventListener("click", function (event) {
     const specificSeat = event.target.innerText;
@@ -21,6 +24,7 @@ function seatList(elementId) {
 
       seatBooking.innerText = seatArray.length;
 
+      //   seat information set
       const span = document.createElement("span");
       span.innerHTML = `
       <div class="flex justify-between">
@@ -32,6 +36,7 @@ function seatList(elementId) {
       `;
       seatInformation.appendChild(span);
 
+      //   total price set
       totalPriceText.innerText = seatArray.length * seatPrice;
     } else if (seatArray.length >= 4) {
       alert("Maximum 4 Ticket can be buy for each");
@@ -40,6 +45,17 @@ function seatList(elementId) {
 }
 
 // console.log(seatBooking);
+
+let setNumber = "";
+phoneNumber.addEventListener("keyup", function (event) {
+  const number = event.target.value;
+  setNumber = number.toString();
+  console.log(setNumber);
+  //   check seat and phone number to enable button
+  if (seatArray.length > 0 && setNumber.length === 11) {
+    nextButton.removeAttribute("disabled");
+  }
+});
 
 function setBackgroundColorById(elementId) {
   const mouseClick = document.getElementById(elementId);
